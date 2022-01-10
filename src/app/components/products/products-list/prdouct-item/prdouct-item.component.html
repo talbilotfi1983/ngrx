@@ -1,0 +1,17 @@
+<tr *ngIf="product">
+  <td>{{product.id}}</td>
+  <td>{{product.name}}</td>
+  <td>{{product.price}}</td>
+  <td>{{product.quantity}}</td>
+  <td>
+    <i [ngClass]="product.selected?'fa fa-check-circle text-success':'fa fa-check-circle text-danger'"
+       (click)="onSelectProduct(product)"></i>
+  </td>
+  <td>{{product.available}}</td>
+  <td>
+    <i [ngClass]="'fa fa-trash text-danger'" (click)="onDeleteProduct(product.id)"></i>
+  </td>
+  <td>
+    <i [ngClass]="'fa fa-edit text-success'" (click)="onEditProduct(product)"></i>
+  </td>
+</tr>
